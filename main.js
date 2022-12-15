@@ -17,3 +17,14 @@ palette.addEventListener('click',(e) => {
     currentColor.style.backgroundColor = e.target.style.backgroundColor;
   }
   });
+
+  const canvas = document.querySelector("#canvas");
+  
+  canvas.addEventListener("click", (e) => {
+    if ( e.target.style.backgroundColor === currentColor.style.backgroundColor) {
+      e.target.style.backgroundColor = "white";
+    } else {
+      e.target.style.backgroundColor = currentColor.style.backgroundColor
+    }
+  })
+
